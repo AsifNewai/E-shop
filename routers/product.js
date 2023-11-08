@@ -153,7 +153,6 @@ router.put('/productImages/:id',upload.array('images'),async(req,res)=>{
     let imageArray = []
     const basePath = `${req.protocol}://${req.get('host')}/public/upload/`;
     if(files){
-        console.log(files)
         files.map(file=>{
             imageArray.push(`${basePath}${file.filename}`)
         })
