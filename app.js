@@ -29,7 +29,7 @@ app.use('/category',categoryRouter);
 app.use('/order',orderRouter);
 app.use('/user',userRouter);
 
-mongoose.connect(process.env.CONNECTION_URL,{dbName:'eshop-db'}).then(()=>console.log("database connected")).catch((err)=>console.log(err));
+mongoose.connect(process.env.CONNECTION_URL,{dbName:'eshop-database'}).then(()=>console.log("database connected")).catch((err)=>console.log(err));
 
 
 app.listen(3000,()=>{

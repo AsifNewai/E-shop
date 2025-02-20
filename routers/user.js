@@ -4,6 +4,8 @@ const CryptoJS = require("crypto-js");
 const jwt = require('jsonwebtoken');
 require('dotenv/config');
 
+//http://localhost:3000/user/login direct login/register url
+
 // get all users
 router.get('/',async (req,res)=>{
     const userList = await User.find().select('-passwordHash');
