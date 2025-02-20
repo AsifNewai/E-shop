@@ -9,6 +9,7 @@ router.get('/',async (req,res)=>{
     if(!orderList){
         res.status(500).json({success:false});
     }
+    console.log("hi")
     res.send(orderList);
 });
 
