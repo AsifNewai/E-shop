@@ -24,10 +24,10 @@ app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
 app.use(errorHandler)
 
 //Routers
-app.use('/product',productRouter);
-app.use('/category',categoryRouter);
-app.use('/order',orderRouter);
-app.use('/user',userRouter);
+app.use(process.env.API_URL + '/product',productRouter);
+app.use(process.env.API_URL + '/category',categoryRouter);
+app.use(process.env.API_URL + '/order',orderRouter);
+app.use(process.env.API_URL + '/user',userRouter);
 
 mongoose.connect(process.env.CONNECTION_URL,{dbName:'eshop-database'}).then(()=>console.log("database connected")).catch((err)=>console.log(err));
 

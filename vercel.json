@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "functions": {
+      "api/**/*.js": { "maxDuration": 10 }
+    },
     "builds": [
       {
         "src": "app.js",
@@ -9,7 +12,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/app.js"
+        "dest": "api/app.js"
       }
     ]
 }
