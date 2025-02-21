@@ -29,6 +29,9 @@ app.use('/category',categoryRouter);
 app.use('/order',orderRouter);
 app.use('/user',userRouter);
 
+// https://e-shop-backend-two.vercel.app/user/register 
+// http://localhost:3000/user/login direct login/register url
+
 mongoose.connect(process.env.CONNECTION_URL,{dbName:'eshop-database'}).then(()=>console.log("database connected")).catch((err)=>console.log(err));
 
 
